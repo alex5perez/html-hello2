@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Feed con Bootstrap</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fab fa-instagram fa-2x"></i>
+            <h4 class="inst-logo">Instagram</h4>
+        </div>
+        <div class="botones-top">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Crear nuevo post
+            </button>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-cog"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibildad</a></li>
+                    <li><a class="dropdown-item" href="#">Privacidad y Data</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="log-out" href="#">Desconectarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Crear nuevo post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="cap"><strong>Titulo:</strong></p>
+                        <textarea placeholder="Aqui va tu post:"></textarea>
+                        <button><i class="fa fa-camera"></i></button>
+                        <button class="marker"><i class="fa fa-map-marker"></i></button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success">Publicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="botones-nav">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">
+                        <i class="fa fa-th" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">
+                        <i class="fa fa-square" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="foto1.png" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto2.png" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto3.png" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto4.jpg" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto5.jpg" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto6.jpg" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto7.png" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto8.png" />
+                        </div>
+                        <div class="col-4">
+                            <img src="foto9.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi primera foto</h1>
+                            <h3>01/04</h3>
+                        </div>
+                        <img src="foto1.png">
+                        <div class="boxFooter">
+                            <p><strong>20490 Me gustas</strong></p>
+                            <p>This is my first photo of the feed. This is a multi line comment for testing purposes. I
+                                am learning to code with <strong> #BreatheCode</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi segunda foto</h1>
+                            <h3>02/04</h3>
+                        </div>
+                        <img src="foto2.png">
+                        <div class="boxFooter">
+                            <p><strong>9230 Me gustas</strong></p>
+                            <p>This is my first photo of the feed. This is a multi line comment for testing purposes. I
+                                am learning to code with <strong> #BreatheCode</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi tercera foto</h1>
+                            <h3>03/04</h3>
+                        </div>
+                        <img src="foto3.png">
+                        <div class="boxFooter">
+                            <p><strong>8376 Me gustas</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nobis, perspiciatis
+                                recusandae hic perferendis ullam corporis voluptas vel ipsa cum aut, quam at, eaque
+                                quasi voluptatum veritatis inventore voluptate neque!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi cuarta foto</h1>
+                            <h3>04/04</h3>
+                        </div>
+                        <img src="foto4.jpg">
+                        <div class="boxFooter">
+                            <p><strong>643 Me gustas</strong></p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus fugit aperiam
+                                voluptatem deserunt laboriosam dolor consectetur exercitationem tempora neque, officia,
+                                commodi harum molestias inventore aspernatur doloribus! Inventore nesciunt laudantium
+                                sed!</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi quinta foto</h1>
+                            <h3>05/04</h3>
+                        </div>
+                        <img src="foto5.jpg">
+                        <div class="boxFooter">
+                            <p><strong>12557 Me gustas</strong></p>
+                            <p>This is my first photo of the feed. This is a multi line comment for testing purposes. I
+                                am learning to code with <strong> #BreatheCode</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi sexta foto</h1>
+                            <h3>06/04</h3>
+                        </div>
+                        <img src="foto6.jpg">
+                        <div class="boxFooter">
+                            <p><strong>170 Me gustas</strong></p>
+                            <p>This is my first photo of the feed. This is a multi line comment for testing purposes. I
+                                am learning to code with <strong> #BreatheCode</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi septima foto</h1>
+                            <h3>07/04</h3>
+                        </div>
+                        <img src="foto7.png">
+                        <div class="boxFooter">
+                            <p><strong>12 Me gustas</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nobis, perspiciatis
+                                recusandae hic perferendis ullam corporis voluptas vel ipsa cum aut, quam at, eaque
+                                quasi voluptatum veritatis inventore voluptate neque!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi octava foto</h1>
+                            <h3>08/04</h3>
+                        </div>
+                        <img src="foto8.png">
+                        <div class="boxFooter">
+                            <p><strong>333 Me gustas</strong></p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus fugit aperiam
+                                voluptatem deserunt laboriosam dolor consectetur exercitationem tempora neque, officia,
+                                commodi harum molestias inventore aspernatur doloribus! Inventore nesciunt laudantium
+                                sed!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="boxHeader">
+                            <h1>Mi novena foto</h1>
+                            <h3>09/04</h3>
+                        </div>
+                        <img src="foto9.jpg">
+                        <div class="boxFooter">
+                            <p><strong>125 Me gustas</strong></p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus fugit aperiam
+                                voluptatem deserunt laboriosam dolor consectetur exercitationem tempora neque, officia,
+                                commodi harum molestias inventore aspernatur doloribus! Inventore nesciunt laudantium
+                                sed!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

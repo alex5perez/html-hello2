@@ -1,0 +1,114 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #cbcbcb;
+    padding: 1%;
+    text-align: center;
+}
+
+.container{
+    margin: 1% auto;
+}
+
+.logo{
+    display: flex;
+}
+
+.inst-logo{
+    margin-left: 3%;
+}
+
+.botones-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-secondary{
+    margin-left: 1rem;
+}
+
+#log-out{
+    color: red;
+}
+
+.modal-body{
+    text-align: left;
+}
+
+textarea{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3% !important;
+}
+
+.marker{
+    width: 32px;
+}
+
+.botones-nav{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#pills-tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% auto 1% auto;
+}
+
+.col-4 img{
+    width: 100%;
+    height: 400px;
+    padding: 3%;
+    object-fit: cover;
+}
+
+.textHeader{
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 1%;
+    margin: 0;
+}
+
+.col-12{
+    background: white;
+    width: 590px !important;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    overflow: hidden;
+    border-color: rgba(194, 194, 194, 0.63) !important;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.boxHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-12 h1{
+    font-size: 30px;
+    margin: 14px;
+}
+
+.col-12 h3{
+    color: grey;
+    margin: 20px;
+    font-weight: 200;
+}
+
+.col-12 img{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.boxFooter p{
+    margin: 2%;
+}
